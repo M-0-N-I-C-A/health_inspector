@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Submit{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+      <label for="name">Your name:</label>
+      <input type="text" name="name" id="name">
+      <br>
+      <label for="age">Your age:</label>
+      <input type="text" name="age" id="age">
+      <br>
+      <label for="gender">Your gender (0 if female, 1 if male):</label>
+      <input type="text" name="gender" id="gender">
+      <br>
+      <label for="height">Your height (cm):</label>
+      <input type="text" name="height" id="height">
+      <br>
+      <label for="weight">Your weight (kg, e.g. 62.0):</label>
+      <input type="text" name="weight" id="weight">
+      <br>
+      <label for="systolic">Your systolic blood pressure:</label>
+      <input type="text" name="systolic" id="systolic">
+      <br>
+      <label for="diastolic">Your diastolic blood pressure:</label>
+      <input type="text" name="diastolic" id="diastolic">
+      <br>
+      <label for="chol">Your cholesterol level (1 if normal, 2 if above normal, 3 if well above normal):</label>
+      <input type="text" name="chol" id="chol">
+      <br>
+      <label for="gluc">Your glucose level (1 if normal, 2 if above normal, 3 if well above normal):</label>
+      <input type="text" name="gluc" id="gluc">
+      <br>
+      <label for="smoke">Your smoking habit (0 if you do not smoke, 1 if you smoke):</label>
+      <input type="text" name="smoke" id="smoke">
+      <br>
+      <label for="alcohol">Your drinking habit (0 if you do not drink, 1 if you drink):</label>
+      <input type="text" name="alcohol" id="alcohol">
+      <br>
+      <label for="active">Whether you exercise regularly: (0 if not, 1 if yes):</label>
+      <input type="text" name="active" id="active">
+      <br>
+      <input type="submit" value="Submit information">
+  </form>
+
+  {% if risk %}
+    <br>
+    Hello {{name}}! Thanks for submitting your information!
+    <br>
+    <br>
+    {% if risk == 2 %}
+    You are at a risk of cardiovascular disease! Please go to see your doctor!
+    {% else %}
+    You are healthy!
+    {% endif %}
+  {% endif %}
+
+{% endblock %}

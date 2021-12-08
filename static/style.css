@@ -1,0 +1,64 @@
+html {
+    font-family: Papyrus, fantasy;
+    font-weight: bolder;
+	height: 100%;
+	width: 1000px;
+	background-color: rgba(36, 127, 201, 0.705);
+	background-image:
+		url(Background.jpg);
+	background-repeat: repeat-x;
+	background-position: 
+		0 20%,
+		0 100%,
+		0 50%,
+		0 100%,
+		0 0;
+	background-size: 
+		1400px,
+		800px,
+		500px 200px,
+		1000px,
+		400px 260px;
+	animation: 50s para infinite linear;
+}
+
+@keyframes para {
+	100% {
+		background-position: 
+			-5000px 20%,
+			-800px 95%,
+			500px 50%,
+			1000px 100%,
+			400px 0;
+	}
+}
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    color: rgb(238, 215, 9, 0.897);
+    line-height: 2.1rem;
+}
+
+
+h1 {
+    color: rgb(238, 215, 9, 0.897);
+}
+
+a {
+    color: CornflowerBlue;
+    text-decoration: none;
+}
+
+li {
+    color: CornflowerBlue;
+}
+
+label {
+    color: LightSeaGreen;
+}
+
+input{
+    color: LightSeaGreen;
+    background-color: transparent;
+}

@@ -1,0 +1,15 @@
+<!doctype html>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>Health Inspector</title>
+<nav>
+  <h1>Heart Disease Risk Assessment</h1>
+  <ul>
+    <li><a href="{{ url_for('submit') }}">Submit your information</a></li>
+  </ul>
+</nav>
+<section class="content">
+    <header>
+       {% block header %}{% endblock %}
+    </header>
+    {% block content %}{% endblock %}
+</section>
